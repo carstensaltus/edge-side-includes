@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Edge Side Includes Demo</title>
+  </head>
+  <style>
+      .include {
+          border: 1px solid #ccc;
+          padding: 20px;
+          margin: 20px;
+      }
+  </style>
+  <body>
+    <h1>Akamai Demo</h1>
+
+    <p>This demo demonstrate the use of Edge Side Includes with Akamai.</p>
+
+    <fieldset>
+        <legend><h3>Including the User component</h3></legend>
+
+        By including this snippet in the src code 
+        
+        <pre>&lt;esi:include src="/components/user.html" /&gt;</pre>
+        
+        <p>It renders this user component</p>
+
+        <div class="include">
+            <esi:include src="/components/user.html" />
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend><h3>Including the Button component</h3></legend>
+
+        By including this snippet in the src code
+        
+        <pre>&lt;esi:include src="/components/button.html" /&gt;</pre>
+        
+        <p>It renders this button component</p>
+
+        <div class="include">
+            <esi:include src="/components/button.html" />
+        </div>
+    </fieldset>
+</body>
+</html>

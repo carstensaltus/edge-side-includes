@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - 3000:3000
+    volumes: 
+      - ./:/usr/src/app
+  akamai:
+    image: akamaiesi/ets-docker:latest
+    ports: 
+      - 8080:80
+    command:
+      - --debug web
+      - --remote_origin web:3000
